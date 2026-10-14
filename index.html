@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">JobTrack</h2>
+
+            <nav>
+                <a href="#overview">Dashboard</a>
+                <a href="#applications">My Applications</a>
+                <a href="#interviews">Interviews</a>
+                <a href="#followups">Follow-ups</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Job Search Workspace</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">JOB SEARCH WORKSPACE</p>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="profile">
+                    <span class="avatar">G</span>
+                    <span>My Workspace</span>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section id="overview" class="welcome">
+                <h2>Welcome back!</h2>
+                <p>Keep your job search organized and stay ready for your next opportunity.</p>
+            </section>
+
+            <!-- Application Statistics -->
+            <section class="stats">
+                <article class="stat-card">
+                    <p>Total Applications</p>
+                    <h2>24</h2>
+                    <span>Jobs tracked</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Interviews</p>
+                    <h2>5</h2>
+                    <span>Interview opportunities</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Offers</p>
+                    <h2>2</h2>
+                    <span>Offers received</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Follow-ups</p>
+                    <h2>3</h2>
+                    <span>Need your attention</span>
+                </article>
+            </section>
+
+           
+<!-- Applications Table -->
+<section id="applications" class="panel">
+
+    <div class="section-heading">
+        <div>
+            <h2>Recent Applications</h2>
+            <p>Keep track of your latest job applications.</p>
+        </div>
+
+        <button
+            type="button"
+            onclick="document.getElementById('application-form').hidden = !document.getElementById('application-form').hidden">
+            + Add Application
+        </button>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="application-tools">
+        <input
+            type="search"
+            placeholder="Search by company or role..."
+            aria-label="Search applications">
+
+        <select aria-label="Filter applications by status">
+            <option value="">All Statuses</option>
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <option value="offer">Offer</option>
+            <option value="rejected">Rejected</option>
+        </select>
+    </div>
+
+    <!-- Add Application Form -->
+    <form id="application-form" class="application-form" hidden>
+        <h3>Add New Application</h3>
+
+        <div class="form-grid">
+            <input type="text" placeholder="Company name" required>
+            <input type="text" placeholder="Job role" required>
+            <input type="date" aria-label="Date applied" required>
+
+            <select aria-label="Application status" required>
+                <option value="">Select status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+        </div>
+
+        <button type="submit">Save Application</button>
+    </form>
+
+    <!-- Applications Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Job Role</th>
+                    <th>Date Applied</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Tech Solutions</td>
+                    <td>Java Developer</td>
+                    <td>12 Oct 2026</td>
+                    <td><span class="status applied">Applied</span></td>
+                </tr>
+
+                <tr>
+                    <td>Innovate Labs</td>
+                    <td>Full Stack Developer</td>
+                    <td>10 Oct 2026</td>
+                    <td><span class="status interview">Interview</span></td>
+                </tr>
+
+                <tr>
+                    <td>Cloud Systems</td>
+                    <td>Backend Developer</td>
+                    <td>08 Oct 2026</td>
+                    <td><span class="status rejected">Rejected</span></td>
+                </tr>
+
+                <tr>
+                    <td>Digital Works</td>
+                    <td>Software Engineer</td>
+                    <td>06 Oct 2026</td>
+                    <td><span class="status offer">Offer</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+
+            <!-- Upcoming Interviews -->
+            <section id="interviews" class="panel">
+                <h2>Upcoming Interviews</h2>
+
+                <article class="interview-item">
+                    <div>
+                        <h3>Innovate Labs</h3>
+                        <p>Full Stack Developer · Technical Round</p>
+                    </div>
+                    <p>15 Oct 2026 · 11:00 AM</p>
+                </article>
+
+                <article class="interview-item">
+                    <div>
+                        <h3>Tech Solutions</h3>
+                        <p>Java Developer · HR Round</p>
+                    </div>
+                    <p>17 Oct 2026 · 2:00 PM</p>
+                </article>
+            </section>
+
+            <!-- Follow-ups -->
+            <section id="followups" class="panel">
+                <h2>Follow-up Reminders</h2>
+                <ul>
+                    <li>Contact the recruiter at Tech Solutions.</li>
+                    <li>Check the application status at Cloud Systems.</li>
+                    <li>Send a thank-you email after your interview.</li>
+                </ul>
+            </section>
+
+            <footer>
+                <p>JobTrack · Organize your search, focus on your future.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
